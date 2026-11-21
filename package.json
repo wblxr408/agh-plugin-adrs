@@ -1,0 +1,68 @@
+{
+  "name": "@wblxr408/adrs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Configuration bundle for an independently authorized runtime.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-adrs"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "ADRS Research Desk",
+      "summary": "Configuration bundle for an independently authorized runtime.",
+      "description": "Start owner-approved research, inspect status, and read retained reports and source evidence.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "深度研究任务台",
+          "summary": "配置 Bundle，配合单独配置和授权的运行组件使用。",
+          "description": "提交经所有者确认的研究题目，查看进度，读取报告版本和原文证据。"
+        }
+      }
+    },
+    "bundles": {
+      "workflow": {
+        "profile": {
+          "mcp": [
+            "adrs"
+          ],
+          "toolPolicy": {
+            "readOnly": false
+          }
+        },
+        "presets": {
+          "adrs": {
+            "name": "adrs",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "ADRS Research Desk",
+            "zh-CN": "深度研究任务台"
+          },
+          "description": {
+            "en": "Start owner-approved research, inspect status, and read retained reports and source evidence.",
+            "zh-CN": "提交经所有者确认的研究题目，查看进度，读取报告版本和原文证据。"
+          },
+          "preset": "adrs",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Start owner-approved research, inspect status, and read retained reports and source evidence.",
+              "zh-CN": "提交经所有者确认的研究题目，查看进度，读取报告版本和原文证据。"
+            }
+          }
+        }
+      }
+    }
+  }
+}
